@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .chart-container {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dialer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tenant</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Campaigns</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Realtime</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Welcome John</h2>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Calls</h5>
+                        <p class="card-text">1243</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Call Duration</h5>
+                        <p class="card-text">03:21:43</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Success Rate</h5>
+                        <p class="card-text">75%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Breaks Amount</h5>
+                        <p class="card-text">5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Agent Calling Performance</div>
+                    <div class="card-body">
+                        <canvas id="agentPerformanceChart" class="chart-container"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Total Call Amounts</div>
+                    <div class="card-body">
+                        <canvas id="totalCallAmountsChart" class="chart-container"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Total Customers Answer Rate</div>
+                    <div class="card-body">
+                        <canvas id="answerRateChart" class="chart-container"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Total Calls Duration</div>
+                    <div class="card-body">
+                        <canvas id="callDurationChart" class="chart-container"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Calls Distribution</div>
+                    <div class="card-body">
+                        <canvas id="callsDistributionChart" class="chart-container"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Agent Performance Chart
+        new Chart(document.getElementById('agentPerformanceChart'), {
+            type: 'line',
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                datasets: [{
+                    label: 'Effective Calls',
+                    data: [1200, 1500, 1700, 1400, 1600],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Total Call Amounts Chart
+        new Chart(document.getElementById('totalCallAmountsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Answered', 'Missed', 'Voicemail'],
+                datasets: [{
+                    data: [5303, 1200, 422],
+                    backgroundColor: ['#36a2eb', '#ff6384', '#ffcd56']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Answer Rate Chart
+        new Chart(document.getElementById('answerRateChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Answer Rate', 'Missed Rate'],
+                datasets: [{
+                    data: [87, 13],
+                    backgroundColor: ['#4bc0c0', '#ff6384']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Call Duration Chart
+        new Chart(document.getElementById('callDurationChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Call A', 'Call B', 'Call C', 'Call D'],
+                datasets: [{
+                    label: 'Duration in minutes',
+                    data: [35, 45, 55, 40],
+                    backgroundColor: '#36a2eb'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Calls Distribution Chart
+        new Chart(document.getElementById('callsDistributionChart'), {
+            type: 'polarArea',
+            data: {
+                labels: ['North', 'South', 'East', 'West'],
+                datasets: [{
+                    data: [1597, 2300, 1800, 1950],
+                    backgroundColor: ['#36a2eb', '#ffcd56', '#ff6384', '#4bc0c0']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

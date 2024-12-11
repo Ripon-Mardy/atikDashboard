@@ -1,265 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
+     <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        .card {
-            border: none;
-            background-color: #ffffff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .card-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .card-body i {
-            font-size: 2rem;
-            color: #36a2eb;
-        }
-
-        .card-title {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-brand, .nav-link {
-            color: #ffffff;
-        }
-
-        .chart-container {
-            height: 300px;
-        }
-
-        .card-header {
-            background-color: #36a2eb;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Dialer</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Agent</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tenant</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Campaigns</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Realtime</a></li>
-            </ul>
-        </div>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="container-fluid mt-4">
+    <!-- welcome  -->
+     <section class="py-2">
+        <div class="container-fluid">
+            <div class="welcome_div">
+              <h1 class="welcome_text">Welcome jhon</h1> 
+            <div class="btn_div">
+               <button class="customBtn">Add Widgets <i class="fa-solid fa-angle-down"></i> </button>
+                <button class="customBtn">Save Changes <i class="fa-solid fa-angle-down"></i> </button>
+            </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Time frame  -->
+      <section class="container-fluid">
+        <div class="section_box">
+          <div class="time_box">
+            <span>Time Frame</span>
+            <div class="time_div">
+             <span class="time_line"></span>
+              <i class="fa-solid fa-sort-down"></i>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="time_box">
+            <span>Time Frame</span>
+            <div class="time_div">
+             <span class="time_line"></span>
+              <i class="fa-solid fa-sort-down"></i>
+            </div>
+          </div>
+
+          <!-- 3  -->
+          <div class="time_box">
+            <span>Time Frame</span>
+            <div class="time_div">
+             <span class="time_line"></span>
+              <i class="fa-solid fa-sort-down"></i>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- calls  -->
+       <section class="py-5">
+        <div class="container-fluid">
+
+          <div class="calls">
+            <div class="calls_box">
+              <span class="calls_icon"><i class="fa-solid fa-phone"></i></span>
+              <div class="total_calls">
+                <h2>Total Calls</h2>
+                <span>1243</span>
+              </div>
+              <span class="cross_icon"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+
+            <!-- 1 -->
+            <div class="calls_box">
+              <span class="calls_icon"><i class="fa-solid fa-phone"></i></span>
+              <div class="total_calls">
+                <h2>Total Calls</h2>
+                <span>1243</span>
+              </div>
+              <span class="cross_icon"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+
+
+          </div>
+
+        </div>
+       </section>
+
+       <!-- charts  -->
+
+
+
+      <div class="container-fluid my-4">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-dark">Welcome John</h2>
+
+                  <!-- Schedule Card -->
+      <div class="col-md-4">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <span>29 June</span>
+            <span class="text-highlight">Today</span>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
             </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>09:00</span>
+              <span>Lila Harper</span>
+              <span>09:00 - 09:30</span>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between">
+              <span>10:00</span>
+              <span>Avery Bennett</span>
+              <span>10:00 - 10:15</span>
+            </div>
+          </div>
+          
         </div>
-
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title">Total Calls</h5>
-                            <p class="card-text">1243</p>
-                        </div>
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                </div>
+      </div>
+          
+          <!-- Agent Performance Line Chart -->
+          <div class="col-md-4">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <span>Agent calling performance</span>
+                <span class="text-highlight">Last Week</span>
+              </div>
+              <canvas id="lineChart"></canvas>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title">Total Call Duration</h5>
-                            <p class="card-text">03:21:43</p>
-                        </div>
-                        <i class="fas fa-clock"></i>
-                    </div>
-                </div>
+          </div>
+          <!-- Total Call Amounts Pie Chart -->
+          <div class="col-md-4">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <span>Total call amounts</span>
+                <span class="text-highlight">Today</span>
+              </div>
+              <canvas id="pieChart1"></canvas>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title">Success Rate</h5>
-                            <p class="card-text">75%</p>
-                        </div>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                </div>
+          </div>
+          <!-- Total Customers Answer Rate Doughnut Chart -->
+          <div class="col-md-4">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <span>Total customers answer rate</span>
+                <span class="text-highlight">Today</span>
+              </div>
+              <canvas id="doughnutChart1"></canvas>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <h5 class="card-title">Breaks Amount</h5>
-                            <p class="card-text">5</p>
-                        </div>
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                </div>
+          </div>
+          <!-- Total Calls Duration Doughnut Chart -->
+          <div class="col-md-4">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <span>Total calls duration</span>
+                <span class="text-highlight">Today</span>
+              </div>
+              <canvas id="doughnutChart2"></canvas>
             </div>
+          </div>
+          <!-- Calls Distribution Pie Chart -->
+          <div class="col-md-4">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <span>Calls distribution</span>
+                <span class="text-highlight">Today</span>
+              </div>
+              <canvas id="pieChart2"></canvas>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Agent Calling Performance</div>
-                    <div class="card-body">
-                        <canvas id="agentPerformanceChart" class="chart-container"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Total Call Amounts</div>
-                    <div class="card-body">
-                        <canvas id="totalCallAmountsChart" class="chart-container"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">Total Customers Answer Rate</div>
-                    <div class="card-body">
-                        <canvas id="answerRateChart" class="chart-container"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">Total Calls Duration</div>
-                    <div class="card-body">
-                        <canvas id="callDurationChart" class="chart-container"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">Calls Distribution</div>
-                    <div class="card-body">
-                        <canvas id="callsDistributionChart" class="chart-container"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Agent Performance Chart
-        new Chart(document.getElementById('agentPerformanceChart'), {
-            type: 'line',
-            data: {
-                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                datasets: [{
-                    label: 'Effective Calls',
-                    data: [1200, 1500, 1700, 1400, 1600],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 2,
-                    fill: false
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
 
-        // Total Call Amounts Chart
-        new Chart(document.getElementById('totalCallAmountsChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Answered', 'Missed', 'Voicemail'],
-                datasets: [{
-                    data: [5303, 1200, 422],
-                    backgroundColor: ['#36a2eb', '#ff6384', '#ffcd56']
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
 
-        // Answer Rate Chart
-        new Chart(document.getElementById('answerRateChart'), {
-            type: 'pie',
-            data: {
-                labels: ['Answer Rate', 'Missed Rate'],
-                datasets: [{
-                    data: [87, 13],
-                    backgroundColor: ['#4bc0c0', '#ff6384']
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
+     
 
-        // Call Duration Chart
-        new Chart(document.getElementById('callDurationChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Call A', 'Call B', 'Call C', 'Call D'],
-                datasets: [{
-                    label: 'Duration in minutes',
-                    data: [35, 45, 55, 40],
-                    backgroundColor: '#36a2eb'
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-
-        // Calls Distribution Chart
-        new Chart(document.getElementById('callsDistributionChart'), {
-            type: 'polarArea',
-            data: {
-                labels: ['North', 'South', 'East', 'West'],
-                datasets: [{
-                    data: [1597, 2300, 1800, 1950],
-                    backgroundColor: ['#36a2eb', '#ffcd56', '#ff6384', '#4bc0c0']
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    </script>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    
+    
+  </body>
 </html>

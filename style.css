@@ -1,0 +1,151 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+body{
+  background-color: #FDFDFD !important;
+}
+:root {
+    --primary-color: #6B7280;
+    --secondary-color: #2ecc71;
+    --font-size: 16px;
+    --para-color : #576574;
+    --icon-bg-color : #0165FD;
+    --shadow : 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .customBtn
+  {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    font-size: var(--font-size);
+    background-color: white;
+    color: var(--para-color);
+  }
+  .customBtn:focus
+  {
+    outline: none;
+  }
+
+  /* welcome  */
+  .welcome_text
+  {
+    color: var(--para-color);
+  }
+  .welcome_div
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn_div
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* time frame  */
+.section_box
+{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.time_box
+{
+  width: 200px;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  color: var(--para-color);
+  flex-direction: column;
+
+}
+.time_box span
+{
+  color: var(--para-color);
+  font-weight: 500;
+}
+.time_div
+{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: white;
+padding: 5px;
+}
+.time_line
+{
+  width: 80px;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.575);
+}
+
+/* calls  */
+.calls
+{
+  display: flex;
+  gap: 20px;
+}
+.calls_box
+{
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  gap: 10px;
+  box-shadow: var(--shadow);
+}
+.calls_icon
+{
+  background-color: var(--icon-bg-color);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.total_calls
+{
+  display: flex;
+  flex-direction: column;
+  line-height: 10px;
+}
+.total_calls h2
+{
+  color: var(--para-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+.total_calls span
+{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cross_icon
+{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--para-color);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* charts 1  */
+.dashboard-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.text-highlight {
+  color: #007bff;
+}
